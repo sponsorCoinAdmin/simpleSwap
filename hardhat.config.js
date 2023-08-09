@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -6,7 +7,9 @@ module.exports = {
   networks: {
     hardhat: {
       forking: {
-        url: "https://mainnet.infura.io/v3/<YOUR_KEY>"
+        // url: "https://mainnet.infura.io/v3/{YOUR INFURA KEY HERE}"
+        // or if using .env file use example similar to below
+        url: process.env.INFURA_API_MAIN_NET_ACCESS_KEY
       }
     }
   }
