@@ -6,7 +6,7 @@ Find your way using our directory below:
 - [Legal Disclaimer & Copyright Agreement ©](#copyright-agreement)
 - [Repository](#repository-information)
 - [About](#about)
-- [Installation Documentation](#installation-details)
+- [Installation Documentation](#installation)
 - [Command Menu Shortcuts](#command-menu-shortcuts)
 - [Package Contents](#package-contents)
 - [Running the Package](#running-the-package)
@@ -36,19 +36,12 @@ Read all copyright clauses and information before continuing to download and/or 
  - - - -
 ### Repository Information<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/repository.png" width="5%" align= "right">
 - <b>https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest</b>
-
 - - - -
 ### About<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/aboutMickey.png" width="6%" align= "right">
 - Version: 1.0.0
 - Release Date: Sept 1st 2023
 - Purpose: [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) is a Simple Ethereum Swap Test.
 - Description: [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) is a Simple Ethereum Swap Test utilizing <b>"Uniswap's Universal Router"</b>.
- - - - -
-### Environment setup<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/setup6.png" width="7%" align= "right">
-- Setup for the simple swap test requires setting up environment file .env.
-- To do so a key is required for network access.
-- For example, an Infura key entry would look look like:
-  - <b>NFURA_API_MAIN_NET_ACCESS_KEY="<Your Infura Key Here></b>"
  - - - -
 ### Installation<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/installation.png" width="7%" align= "right">
 - Please Note: For a comprehensive demonstration of the installation process, refer to the 'Video Tutorial' section below.
@@ -60,13 +53,18 @@ Read all copyright clauses and information before continuing to download and/or 
     - This installation assumes operation under bash or gitBash for windows</b>
     - The Menu System modifies the ~/.gitbash.rc file to and an environment path link
  - - - -
+### Environment setup<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/setup6.png" width="7%" align= "right">
+- Setup for the simple swap test requires setting up environment file .env.
+- To do so a key is required for network access.
+- For example, an Infura key entry would look look like:
+  - <b>NFURA_API_MAIN_NET_ACCESS_KEY="<Your Infura Key Here></b>"
+ - - - -
 ### Command Menu Shortcuts<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/menu 4.jpg" width="7%" align= "right">
 The <b>All Command Menus</b> are a list of shortcut alias commands for administering the [<b>'spCoinSimpleSwapTest'</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) project.
 - If the menu system is installed correctly, simply type short cut alias <b>'m \<enter>'</b> in a bash window and the following should appear:
 #### The Main Menu
 ![<b>Author Image</b>](https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/mainMenu.jpg)
 The above menu is simply a menu of many submenus. Each entry is an alias to an alternate command menu short cut. Each submenu exists under the repositories’ spCoinSimpleSwapTest/env directory. These menus cane be more completely described in the file [<b>./setupEnv/ReadMe.md</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv/blob/main/README.md).
-
 - - - -
 ### Package Contents (Important Files Only)<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/contents.png" width="6%" align= "right">
 - [<b>README.md</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/edit/main/README.md) ~ The Readme Documentation is this documentation.
