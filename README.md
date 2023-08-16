@@ -20,7 +20,7 @@ Robert Lanson | sponsorcoin@yahoo.com
 
 - - - -
 ### Copyright Agreement<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/policeman.png" width="5%" align= "right">
-<b>Package [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTestTests/tree/main) ©</b> 
+<b>Package [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTests/tree/main) ©</b> 
 
 Read all copyright clauses and information before continuing to download and/or interact with this software. All interaction and use of such software hereon forward assumes complete agreement to all copyright terms and general conditions as specified. 
 
@@ -35,19 +35,19 @@ Read all copyright clauses and information before continuing to download and/or 
 <b>**INSTALL AT YOUR OWN RISK: END OF DISCLAIMER 
  - - - -
 ### Repository Information<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/repository.png" width="5%" align= "right">
-- <b>https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTestTests</b>
+- <b>https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTests</b>
 
 - - - -
 ### About<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/aboutMickey.png" width="6%" align= "right">
 - Version: 1.0.0
 - Release Date: Sept 1st 2023
-- Purpose: [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTestTests/tree/main) is a WIP GUI front end package to demonstrate blockchain connectivity and transactions.
-- Description: [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTestTests/tree/main) package is a front end GUI package mimicking Uniswap's appearance and utilizing Uniswap’s SDK to perform price matching and trade transactions. 
+- Purpose: [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTests/tree/main) is a WIP GUI front end package to demonstrate blockchain connectivity and transactions.
+- Description: [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTests/tree/main) package is a front end GUI package mimicking Uniswap's appearance and utilizing Uniswap’s SDK to perform price matching and trade transactions. 
  - - - -
 ### Installation Details<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/installation.png" width="7%" align= "right">
 - Please Note: For a comprehensive demonstration of the installation process, refer to the 'Video Tutorial' section below.
 - Clone the package to your local computer:
-- Change your current directory to {root installaction}/[<b>spCoinSimpleSwapTestTests</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTestTests/tree/main)
+- Change your current directory to {root installaction}/[<b>spCoinSimpleSwapTests</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTests/tree/main)
 - Next install the text menu driven system as follows:
     - execute the following command: <b>'. ./[<b>spCoinEnvSetup.sh</b>'](https://github.com/sponsorCoinAdmin/spCoinSetupEnv/blob/main/spCoinEnvSetup.sh)</b>
 - <b>Notes:
@@ -55,32 +55,32 @@ Read all copyright clauses and information before continuing to download and/or 
     - The Menu System modifies the ~/.gitbash.rc file to and an environment path link
 
 ### Command Menu Shortcuts<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/menu 4.jpg" width="7%" align= "right">
-The <b>All Command Menus</b> are a list of shortcut alias commands for administering the [<b>'spCoinSimpleSwapTestTests'</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTestTests/tree/main) project.
+The <b>All Command Menus</b> are a list of shortcut alias commands for administering the [<b>'spCoinSimpleSwapTests'</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTests/tree/main) project.
 - If the menu system is installed correctly, simply type short cut alias <b>'m \<enter>'</b> in a bash window and the following should appear:
 #### The Main Menu
 ![<b>Author Image</b>](https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/mainMenu.jpg)
-The above menu is simply a menu of many submenus. Each entry is an alias to an alternate command menu short cut. Each submenu exists under the repositories’ spCoinSimpleSwapTestTests/env directory. These menus cane be more completely described in the file [<b>./setupEnv/ReadMe.md</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv/blob/main/README.md).
+The above menu is simply a menu of many submenus. Each entry is an alias to an alternate command menu short cut. Each submenu exists under the repositories’ spCoinSimpleSwapTests/env directory. These menus cane be more completely described in the file [<b>./setupEnv/ReadMe.md</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv/blob/main/README.md).
 
 - - - -
 ### Package Contents<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/contents.png" width="6%" align= "right">
-- [<b>README.md</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTestTests/edit/main/README.md) ~ The Readme Documentation is this documentation.
-- [<b>./scripts/spCoinSetup.sh</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTestTests/blob/main/scripts/spCoinSetup.sh)  ~ This file is to be run from the scripts directory and downloads the [<b>spCoinSimpleSwapTestTests</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTestTests/tree/main</b>) repository to local. Next it executes the [<b>spCoinEnvSetup.sh</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv/blob/main/spCoinEnvSetup.sh) file for environment setup.
+- [<b>README.md</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTests/edit/main/README.md) ~ The Readme Documentation is this documentation.
+- [<b>./scripts/spCoinSetup.sh</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTests/blob/main/scripts/spCoinSetup.sh)  ~ This file is to be run from the scripts directory and downloads the [<b>spCoinSimpleSwapTests</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTests/tree/main</b>) repository to local. Next it executes the [<b>spCoinEnvSetup.sh</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv/blob/main/spCoinEnvSetup.sh) file for environment setup.
 - [<b>./setupEnv/</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv/tree/ef96401c818432d0fe6ff1d6642fab31f44b6fb5) ~ This directory is a mounted submodule containing files for environment and menu execution commands. refer to the [<b>./setupEnv/ReadMe.md</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv/blob/main/README.md) for a more complete Overview.
-- [<b>./setupEnv/spCoinEnvSetup.sh</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv) ~ This shell creates the environment variable settings and sets up the menus for testing and execution commands in [<b>'spCoinSimpleSwapTestTests'</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTestTests/tree/main).
+- [<b>./setupEnv/spCoinEnvSetup.sh</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv) ~ This shell creates the environment variable settings and sets up the menus for testing and execution commands in [<b>'spCoinSimpleSwapTests'</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTests/tree/main).
  - - - -
 ### Running the Package<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/running2.png" width="6%" align= "right">
 It is recommended to read the contents of the scripts to be assured of the installation process and what will be installed.  There may not be an associated uninstalling script, so uninstalling is the owner’s responsibility.
-  - Add the .env file to the package directory <b>[<b>spCoinSimpleSwapTestTests</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTestTests/tree/main)'</b>. This adds the required network access keys.
+  - Add the .env file to the package directory <b>[<b>spCoinSimpleSwapTests</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTests/tree/main)'</b>. This adds the required network access keys.
 
 After a new Linux/gitBash successful installation you can start the program directly in two ways as follows:
-    1. cd into the Package <b>[<b>'spCoinSimpleSwapTestTests'</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTestTests/tree/main)'</b> and execute the command <b>'npm support'</b>.
+    1. cd into the Package <b>[<b>'spCoinSimpleSwapTests'</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTests/tree/main)'</b> and execute the command <b>'npm support'</b>.
     2. Running the menu test display, <b>'mt'</b>, command will list the testing options.
        running the alias menu command runserver will start the spCoinEnvSetup.sh</b> application.
  - - - -
 ### Video Tutorial<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/video.png" width="5%" align= "right">
 - Comprehensive Video Tutorial Currently Under Construction. Resource will be posted as soon as it is ready for publication.
 
-<b>[![ToDo](https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/maxresdefault.jpg)]</b>(https://youtu.be/T_d5-y8hpYI "<b>spCoinSimpleSwapTestTests</b> ~ A brief overview")
+<b>[![ToDo](https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/maxresdefault.jpg)]</b>(https://youtu.be/T_d5-y8hpYI "<b>spCoinSimpleSwapTests</b> ~ A brief overview")
 
 ### About the Authors
 ![<b>Author Image</b>](https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/RobinPhoto.jpg)
