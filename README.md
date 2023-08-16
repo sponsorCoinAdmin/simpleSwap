@@ -88,7 +88,7 @@ After a new Linux/gitBash successful installation you can start the program dire
 <b>[![ToDo](https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/maxresdefault.jpg)]</b>(https://youtu.be/T_d5-y8hpYI "<b>spCoinSimpleSwapTest</b> ~ A brief overview")
 
 ### About the Author
-![<b>Author Image</b>](https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/RobinPhoto.jpg)
+![<b>Author Image</b>](https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/RobinPhoto.jpg)<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/computer-nerd-1.png" width="6%" align= "right">
 - Name: Robert Lanson
 - Position Lead Architect/CEO
 - Email: <b>sponsorcoin@yahoo.com</b>
