@@ -41,8 +41,8 @@ Read all copyright clauses and information before continuing to download and/or 
 ### About<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/aboutMickey.png" width="6%" align= "right">
 - Version: 1.0.0
 - Release Date: Sept 1st 2023
-- Purpose: [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) is a WIP GUI front end package to demonstrate blockchain connectivity and transactions.
-- Description: [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) package is a front end GUI package mimicking Uniswap's appearance and utilizing Uniswap’s SDK to perform price matching and trade transactions. 
+- Purpose: [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) is a Simple Ethereum Swap Test.
+- Description: [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) is a Simple Ethereum Swap Test utilizing <b>"Uniswap's Universal Router"</b>.
  - - - -
 ### Installation Details<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/installation.png" width="7%" align= "right">
 - Please Note: For a comprehensive demonstration of the installation process, refer to the 'Video Tutorial' section below.
