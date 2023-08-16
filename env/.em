@@ -1,6 +1,6 @@
 clear
 echo "=========================================================================="
-echo "                       ALIAS TEST MENU SETTINGS"
+echo "                     ALIAS ENVIRONMENT MENU SETTINGS"
 echo "=========================================================================="
-cat  $SPONSOR_COIN_ENV/.ta
+cat  $SPONSOR_COIN_ENV/.ea
 echo "=========================================================================="
