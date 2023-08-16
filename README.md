@@ -12,7 +12,7 @@ Find your way using the directory below:
 - [Command Menu Shortcuts](#command-menu-shortcuts)
 - [Running the Package](#running-the-package)
 - [Video Tutorial](#video-tutorial)
-- [About the Author](#about-the-authors)
+- [About the Author](#about-the-author)
  </b>
  
  Name  | Key Contact
@@ -87,7 +87,7 @@ After a new Linux/gitBash successful installation you can start the program dire
 
 <b>[![ToDo](https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/maxresdefault.jpg)]</b>(https://youtu.be/T_d5-y8hpYI "<b>spCoinSimpleSwapTest</b> ~ A brief overview")
 
-### About the Authors
+### About the Author
 ![<b>Author Image</b>](https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/RobinPhoto.jpg)
 - Name: Robert Lanson
 - Position Lead Architect/CEO
