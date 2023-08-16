@@ -82,6 +82,7 @@ After a new Linux/gitBash successful installation you can start the program dire
 1. cd into the Package [<b>/spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) and execute the command <b>'node scripts/01_simpleSwap.js'</b>.
 2. Running the test menu display, <b>'tm'</b>, command will list the testing options.
   running the alias menu command <b>'runtest'</b> will start the spCoinEnvSetup.sh</b> application.
+Running the alias menu command <b>'runtest'</b> will start the [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) application.
  - - - -
 ### Video Tutorial<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/video.png" width="5%" align= "right">
 - Comprehensive Video Tutorial Currently Under Construction. Resource will be posted as soon as it is ready for publication.
