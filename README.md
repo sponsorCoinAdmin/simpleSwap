@@ -62,7 +62,7 @@ The <b>All Command Menus</b> are a list of shortcut alias commands for administe
 The above menu is simply a menu of many submenus. Each entry is an alias to an alternate command menu short cut. Each submenu exists under the repositories’ spCoinSimpleSwapTest/env directory. These menus cane be more completely described in the file [<b>./setupEnv/ReadMe.md</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv/blob/main/README.md).
 
 - - - -
-### Package Contents<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/contents.png" width="6%" align= "right">
+### Package Contents (Important Files Only)<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/contents.png" width="6%" align= "right">
 - [<b>README.md</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/edit/main/README.md) ~ The Readme Documentation is this documentation.
 - [<b>./scripts/spCoinSetup.sh</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/blob/main/scripts/spCoinSetup.sh)  ~ This file is to be run from the scripts directory and downloads the [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main</b>) repository to local. Next it executes the [<b>spCoinEnvSetup.sh</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv/blob/main/spCoinEnvSetup.sh) file for environment setup.
 - [<b>./setupEnv/</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv/tree/ef96401c818432d0fe6ff1d6642fab31f44b6fb5) ~ This directory is a mounted submodule containing files for environment and menu execution commands. refer to the [<b>./setupEnv/ReadMe.md</b>](https://github.com/sponsorCoinAdmin/spCoinSetupEnv/blob/main/README.md) for a more complete Overview.
@@ -73,9 +73,9 @@ It is recommended to read the contents of the scripts to be assured of the insta
   - Add the .env file to the package directory <b>[<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main)'</b>. This adds the required network access keys.
 
 After a new Linux/gitBash successful installation you can start the program directly in two ways as follows:
-    1. cd into the Package <b>[<b>'spCoinSimpleSwapTest'</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main)'</b> and execute the command <b>'npm support'</b>.
-    2. Running the menu test display, <b>'mt'</b>, command will list the testing options.
-       running the alias menu command runserver will start the spCoinEnvSetup.sh</b> application.
+    - 1. cd into the Package <b>[<b>'spCoinSimpleSwapTest'</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main)'</b> and execute the command <b>'node scripts/01_simpleSwap.js''</b>.
+    - 2. Running the menu test display, <b>'tm'</b>, command will list the testing options.
+       running the alias menu command <b>runtest</b> will start the spCoinEnvSetup.sh</b> application.
  - - - -
 ### Video Tutorial<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/video.png" width="5%" align= "right">
 - Comprehensive Video Tutorial Currently Under Construction. Resource will be posted as soon as it is ready for publication.
