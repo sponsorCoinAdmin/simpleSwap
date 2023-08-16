@@ -44,7 +44,13 @@ Read all copyright clauses and information before continuing to download and/or 
 - Purpose: [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) is a Simple Ethereum Swap Test.
 - Description: [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) is a Simple Ethereum Swap Test utilizing <b>"Uniswap's Universal Router"</b>.
  - - - -
-### Installation Details<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/installation.png" width="7%" align= "right">
+### Environment setup<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/setup6.png" width="7%" align= "right">
+- Setup for the simple swap test requires setting up environment file .env.
+- To do so a key is required for network access.
+- For example, an Infura key entry would look look like:
+  - <b>NFURA_API_MAIN_NET_ACCESS_KEY="<Your Infura Key Here></b>"
+ - - - -
+### Installation<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/installation.png" width="7%" align= "right">
 - Please Note: For a comprehensive demonstration of the installation process, refer to the 'Video Tutorial' section below.
 - Clone the package to your local computer:
 - Change your current directory to {root installaction}/[<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main)
@@ -53,7 +59,7 @@ Read all copyright clauses and information before continuing to download and/or 
 - <b>Notes:
     - This installation assumes operation under bash or gitBash for windows</b>
     - The Menu System modifies the ~/.gitbash.rc file to and an environment path link
-
+ - - - -
 ### Command Menu Shortcuts<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/menu 4.jpg" width="7%" align= "right">
 The <b>All Command Menus</b> are a list of shortcut alias commands for administering the [<b>'spCoinSimpleSwapTest'</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) project.
 - If the menu system is installed correctly, simply type short cut alias <b>'m \<enter>'</b> in a bash window and the following should appear:
