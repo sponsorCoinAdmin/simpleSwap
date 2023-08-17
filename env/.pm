@@ -1,6 +1,6 @@
 clear
 echo "=========================================================================="
-echo "                    ALIAS PROJECT MENU SETTINGS"
+echo "         { spCoinSimpleSwapTest  } PROJECT ALIAS MENU SETTINGS"
 echo "=========================================================================="
 cat  $SPONSOR_COIN_ENV/.pa
 echo "=========================================================================="

@@ -1,7 +1,7 @@
-#TESTING ALIAS MANAGEMENT
+# { spCoinSimpleSwapTest } TESTING ALIAS MANAGEMENT
 alias ta=". $SPONSOR_COIN_ENV/.ta"
 alias tm=". $SPONSOR_COIN_ENV/.tm"
 alias vta="vi $SPONSOR_COIN_ENV/.ta;ta"
 
-# TESTING ALIAS COMMAND'S
+# { spCoinSimpleSwapTest } TESTING ALIAS COMMAND'S
 alias runtest='cd $SPONSOR_COIN_HOME; node scripts/01_simpleSwap.js'

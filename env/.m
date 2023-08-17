@@ -1,6 +1,6 @@
 clear
 echo "=========================================================================="
-echo "                        ALIAS MAIN MENU SETTINGS"
+echo "           { spCoinSimpleSwapTest } MAIN ALIAS MENU SETTINGS"
 echo "=========================================================================="
 echo "m = The main menu, it is a Menu of Menu's, It displays 'THIS' menu."
 echo "pm = Project menu, stores project testing shourcut commands"

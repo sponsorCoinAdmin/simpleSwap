@@ -1,11 +1,11 @@
-# ALIAS ENVIRONMENT MENU SETTINGS
+# { spCoinSimpleSwapTest } ALIAS ENVIRONMENT MENU SETTINGS
 alias ea=". $SPONSOR_COIN_ENV/.ea"
 alias em=". $SPONSOR_COIN_ENV/.em"
 alias ve="vi $SPONSOR_COIN_ENV/.e;e"
 alias vea="vi $SPONSOR_COIN_ENV/.ea;ea"
 alias m=". $SPONSOR_COIN_ENV/.m"
 
-# DIRECTORY EDITING SETTINGS
+# { spCoinSimpleSwapTest } DIRECTORY EDITING SETTINGS
 alias cdenv="cd $SPONSOR_COIN_ENV"
 alias cdsetup="cd $SPONSOR_COIN_SETUP"
 alias cdspc="cd $SPONSOR_COIN_HOME"
