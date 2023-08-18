@@ -15,7 +15,7 @@ const ETHER = Ether.onChain(1)
 
 const WETH = new Token(1, process.env.MAINNET_WETH, 18, 'WETH', 'Wrapped Ether')
 const USDC = new Token(1, process.env.MAINNET_USDC, 6, 'USDC', 'USD Coin')
-const SENDER = process.env.MAINNET_SENDER_WALLET
+const SIGNER = process.env.MAINNET_SIGNER_WALLET
 const UNIVERSAL_SWAP_ROUTER = process.env.UNIVERSAL_SWAP_ROUTER
 
 const wethContract = new HARDHAT.ethers.Contract(WETH.address, erc20Abi, PROVIDER)
@@ -54,7 +54,7 @@ function swapOptions(options) {
     return Object.assign(
         {
             slippageTolerance: new Percent(5, 100),
-            sender: SENDER,
+            signer: SIGNER,
         },
         options
     )
@@ -89,7 +89,7 @@ function buildTrade(trades) {
 }
 
 async function main() {
-    const signer = await HARDHAT.ethers.getImpersonatedSigner(SENDER);
+    const signer = await HARDHAT.ethers.getImpersonatedSigner(SIGNER);
 
     const WETH_USDC_V3 = await getPool(WETH, USDC, FeeAmount.MEDIUM)
 
@@ -110,9 +110,9 @@ async function main() {
     let ethBalance
     let wethBalance
     let usdcBalance
-    ethBalance = await PROVIDER.getBalance(SENDER)
-    wethBalance = await wethContract.balanceOf(SENDER)
-    usdcBalance = await usdcContract.balanceOf(SENDER)
+    ethBalance = await PROVIDER.getBalance(SIGNER)
+    wethBalance = await wethContract.balanceOf(SIGNER)
+    usdcBalance = await usdcContract.balanceOf(SIGNER)
     console.log('---------------------------- BEFORE')
     console.log('ethBalance', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
     console.log('wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
@@ -122,16 +122,16 @@ async function main() {
         data: params.calldata,
         to: UNIVERSAL_SWAP_ROUTER,
         value: params.value,
-        from: SENDER,
+        from: SIGNER,
     })
 
     const receipt = await tx.wait()
     console.log('---------------------------- SUCCESS?')
     console.log('status', receipt.status)
 
-    ethBalance = await PROVIDER.getBalance(SENDER)
-    wethBalance = await wethContract.balanceOf(SENDER)
-    usdcBalance = await usdcContract.balanceOf(SENDER)
+    ethBalance = await PROVIDER.getBalance(SIGNER)
+    wethBalance = await wethContract.balanceOf(SIGNER)
+    usdcBalance = await usdcContract.balanceOf(SIGNER)
     console.log('---------------------------- AFTER')
     console.log('ethBalance', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
     console.log('wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))

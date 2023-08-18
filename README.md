@@ -61,7 +61,7 @@ Project [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoin
 
  The .env file contains settings for this program to operate on and contains the following entries.
 - INFURA_API_MAIN_NET_ACCESS_KEY="https://mainnet.infura.io/v3/a379b9641c8640d2ac8206b8adcfa060"
-- MAINNET_SENDER_WALLET=["0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B"](https://etherscan.io/address/0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B)
+- MAINNET_SIGNER_WALLET=["0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B"](https://etherscan.io/address/0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B)
 - MAINNET_RECIPIENT_WALLET=["0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B"](https://etherscan.io/address/0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B)
 - MAINNET_USDC=["0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48)
 - MAINNET_WETH=["0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
