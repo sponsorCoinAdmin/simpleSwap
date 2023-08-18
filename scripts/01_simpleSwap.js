@@ -16,7 +16,7 @@ const ETHER = Ether.onChain(1)
 const WETH = new Token(1, process.env.MAINNET_WETH, 18, 'WETH', 'Wrapped Ether')
 const USDC = new Token(1, process.env.MAINNET_USDC, 6, 'USDC', 'USD Coin')
 const SENDER = process.env.MAINNET_SENDER_WALLET
-const RECIPIENT = process.env.MAINNET_RECIPIENT_WALLET
+const UNIVERSAL_SWAP_ROUTER = process.env.UNIVERSAL_SWAP_ROUTER
 
 const wethContract = new HARDHAT.ethers.Contract(WETH.address, erc20Abi, PROVIDER)
 const usdcContract = new HARDHAT.ethers.Contract(USDC.address, erc20Abi, PROVIDER)
@@ -54,7 +54,7 @@ function swapOptions(options) {
     return Object.assign(
         {
             slippageTolerance: new Percent(5, 100),
-            recipient: SENDER,
+            sender: SENDER,
         },
         options
     )
@@ -120,7 +120,7 @@ async function main() {
 
     const tx = await signer.sendTransaction({
         data: params.calldata,
-        to: RECIPIENT,
+        to: UNIVERSAL_SWAP_ROUTER,
         value: params.value,
         from: SENDER,
     })
