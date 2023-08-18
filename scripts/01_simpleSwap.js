@@ -1,4 +1,5 @@
 const { SwapRouter } = require('@uniswap/universal-router-sdk')
+require("dotenv").config();
 const { TradeType, Ether, Token, CurrencyAmount, Percent } = require('@uniswap/sdk-core')
 const { Trade: V2Trade } = require('@uniswap/v2-sdk')
 const { Pool, nearestUsableTick, TickMath, TICK_SPACINGS, FeeAmount, Trade: V3Trade, Route: RouteV3  } = require('@uniswap/v3-sdk')
@@ -7,26 +8,25 @@ const IUniswapV3Pool = require('@uniswap/v3-core/artifacts/contracts/UniswapV3Po
 const JSBI = require('jsbi')
 const erc20Abi = require('../abis/erc20.json')
 
-
-const hardhat = require("hardhat");
-const provider = hardhat.ethers.provider;
-
+const HARDHAT = require("hardhat");
+const PROVIDER = HARDHAT.ethers.provider;
 
 const ETHER = Ether.onChain(1)
-const WETH = new Token(1, '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', 18, 'WETH', 'Wrapped Ether')
-const USDC = new Token(1, '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', 6, 'USDC', 'USD Coin')
 
+const WETH = new Token(1, process.env.MAINNET_WETH, 18, 'WETH', 'Wrapped Ether')
+const USDC = new Token(1, process.env.MAINNET_USDC, 6, 'USDC', 'USD Coin')
+const SENDER = process.env.MAINNET_SENDER_WALLET
+const RECIPIENT = process.env.MAINNET_RECIPIENT_WALLET
 
-const wethContract = new hardhat.ethers.Contract(WETH.address, erc20Abi, provider)
-const usdcContract = new hardhat.ethers.Contract(USDC.address, erc20Abi, provider)
-
+const wethContract = new HARDHAT.ethers.Contract(WETH.address, erc20Abi, PROVIDER)
+const usdcContract = new HARDHAT.ethers.Contract(USDC.address, erc20Abi, PROVIDER)
 
 async function getPool(tokenA, tokenB, feeAmount) {
     const [token0, token1] = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA]
 
     const poolAddress = Pool.getAddress(token0, token1, feeAmount)
 
-    const contract = new hardhat.ethers.Contract(poolAddress, IUniswapV3Pool.abi, provider)
+    const contract = new HARDHAT.ethers.Contract(poolAddress, IUniswapV3Pool.abi, PROVIDER)
 
     let liquidity = await contract.liquidity()
 
@@ -54,7 +54,7 @@ function swapOptions(options) {
     return Object.assign(
         {
             slippageTolerance: new Percent(5, 100),
-            recipient: RECIPIENT,
+            recipient: SENDER,
         },
         options
     )
@@ -88,16 +88,12 @@ function buildTrade(trades) {
     })
 }
 
-
-const RECIPIENT = '0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B'
-
-
 async function main() {
-    const signer = await hardhat.ethers.getImpersonatedSigner(RECIPIENT);
+    const signer = await HARDHAT.ethers.getImpersonatedSigner(SENDER);
 
     const WETH_USDC_V3 = await getPool(WETH, USDC, FeeAmount.MEDIUM)
 
-    const inputEther = hardhat.ethers.utils.parseEther('1').toString()
+    const inputEther = HARDHAT.ethers.utils.parseEther('1').toString()
 
     const trade = await V3Trade.fromRoute(
         new RouteV3([WETH_USDC_V3], ETHER, USDC),
@@ -114,40 +110,33 @@ async function main() {
     let ethBalance
     let wethBalance
     let usdcBalance
-    ethBalance = await provider.getBalance(RECIPIENT)
-    wethBalance = await wethContract.balanceOf(RECIPIENT)
-    usdcBalance = await usdcContract.balanceOf(RECIPIENT)
+    ethBalance = await PROVIDER.getBalance(SENDER)
+    wethBalance = await wethContract.balanceOf(SENDER)
+    usdcBalance = await usdcContract.balanceOf(SENDER)
     console.log('---------------------------- BEFORE')
-    console.log('ethBalance', hardhat.ethers.utils.formatUnits(ethBalance, 18))
-    console.log('wethBalance', hardhat.ethers.utils.formatUnits(wethBalance, 18))
-    console.log('usdcBalance', hardhat.ethers.utils.formatUnits(usdcBalance, 6))
+    console.log('ethBalance', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
+    console.log('wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
+    console.log('usdcBalance', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
 
     const tx = await signer.sendTransaction({
         data: params.calldata,
-        to: '0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B',
+        to: RECIPIENT,
         value: params.value,
-        from: RECIPIENT,
+        from: SENDER,
     })
 
     const receipt = await tx.wait()
     console.log('---------------------------- SUCCESS?')
     console.log('status', receipt.status)
 
-    ethBalance = await provider.getBalance(RECIPIENT)
-    wethBalance = await wethContract.balanceOf(RECIPIENT)
-    usdcBalance = await usdcContract.balanceOf(RECIPIENT)
+    ethBalance = await PROVIDER.getBalance(SENDER)
+    wethBalance = await wethContract.balanceOf(SENDER)
+    usdcBalance = await usdcContract.balanceOf(SENDER)
     console.log('---------------------------- AFTER')
-    console.log('ethBalance', hardhat.ethers.utils.formatUnits(ethBalance, 18))
-    console.log('wethBalance', hardhat.ethers.utils.formatUnits(wethBalance, 18))
-    console.log('usdcBalance', hardhat.ethers.utils.formatUnits(usdcBalance, 6))
+    console.log('ethBalance', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
+    console.log('wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
+    console.log('usdcBalance', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
 }
-
-
-/*
-    node scripts/01_simpleSwap.js
-*/
-
-
 
 main()
     .then(() => process.exit(0))
