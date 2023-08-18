@@ -55,16 +55,16 @@ Read all copyright clauses and information before continuing to download and/or 
     - The Menu System modifies the ~/.gitbash.rc file to and an environment path link
  - - - -
 ### Environment setup<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/setup6.png" width="7%" align= "right">
-This Program transfers mainnet ETH from SENDER to RECIPIENT on a fork of ethernet. Since this is a hardhat fork of the mainnet, no real data is transferred. The addresses of the program can be found at:
-- RECIPIENT ~ https://etherscan.io/address/0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B
+Project [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoinSimpleSwapTest/tree/main) transfers mainnet ETH from SENDER to RECIPIENT on a fork of mainnet ethernet. Since this is a mainnet hardhat fork, no real data is transferred. The addresses of the program can be found at:
 - SENDER ~ https://etherscan.io/address/0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B
+- RECIPIENT ~ https://etherscan.io/address/0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B
 
  The .env file contains settings for this program to operate on and contains the following entries.
 - INFURA_API_MAIN_NET_ACCESS_KEY="https://mainnet.infura.io/v3/a379b9641c8640d2ac8206b8adcfa060"
-- MAINNET_SENDER_WALLET="0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B"
-- MAINNET_RECIPIENT_WALLET="0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B"
-- MAINNET_USDC="0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
-- MAINNET_WETH="0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+- MAINNET_SENDER_WALLET=["0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B"](https://etherscan.io/address/0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B)
+- MAINNET_RECIPIENT_WALLET=["0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B"](https://etherscan.io/address/0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B)
+- MAINNET_USDC=["0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48)
+- MAINNET_WETH=["0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
 Setup for the simple swap test requires setting up environment .env file.
 - A sample configuration file <b>.env</b> exists in  project's home directory <b>/spCoinSimpleSwapTest</b>.
 - This file, <b>".env"</b> requires you key to be added for network access.
