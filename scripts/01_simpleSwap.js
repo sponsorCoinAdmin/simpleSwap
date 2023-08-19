@@ -86,13 +86,15 @@ function buildTrade(trades) {
     })
 }
 
-async function universalRouterSwap(_signer, _params) {
+async function universalRouterSwap(_signer, routerTrade) {
     // let quantity = "" + quantity;
+    const opts = swapOptions({})
+    const params = SwapRouter.swapERC20CallParameters(routerTrade, opts)
 
     const tx = await _signer.sendTransaction({
-        data: _params.calldata,
+        data: params.calldata,
         to: UNIVERSAL_SWAP_ROUTER,
-        value: _params.value,
+        value: params.value,
         from: SIGNER_ADDRESS,
     })
 
@@ -116,10 +118,6 @@ async function main() {
 
     const routerTrade = buildTrade([trade])
 
-    const opts = swapOptions({})
-
-    const params = SwapRouter.swapERC20CallParameters(routerTrade, opts)
-
     let ethBalance
     let wethBalance
     let usdcBalance
@@ -131,7 +129,7 @@ async function main() {
     console.log('wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
     console.log('usdcBalance', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
 
-    universalRouterSwap(impSigner, params);
+    universalRouterSwap(impSigner, routerTrade);
 
     ethBalance = await PROVIDER.getBalance(SIGNER_ADDRESS)
     wethBalance = await wethContract.balanceOf(SIGNER_ADDRESS)
