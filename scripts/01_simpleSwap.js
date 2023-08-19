@@ -86,12 +86,18 @@ function buildTrade(trades) {
     })
 }
 
-async function universalRouterSwap(_impSigner, _quantity) {
-    _quantity = "" + _quantity;
+async function universalRouterSwap(_quantity) {
+    let quantity = "" + quantity;
 
+}
+
+
+
+async function main() {
+    const quantity = '10';
+    const impSigner = await HARDHAT.ethers.getImpersonatedSigner(SIGNER_ADDRESS);
     const WETH_USDC_V3 = await getPool(WETH, USDC, FeeAmount.MEDIUM)
-
-    const inputEther = HARDHAT.ethers.utils.parseEther(_quantity).toString()
+    const inputEther = HARDHAT.ethers.utils.parseEther(quantity).toString()
 
     const trade = await V3Trade.fromRoute(
         new RouteV3([WETH_USDC_V3], ETHER, USDC),
@@ -116,7 +122,7 @@ async function universalRouterSwap(_impSigner, _quantity) {
     console.log('wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
     console.log('usdcBalance', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
 
-    const tx = await _impSigner.sendTransaction({
+    const tx = await impSigner.sendTransaction({
         data: params.calldata,
         to: UNIVERSAL_SWAP_ROUTER,
         value: params.value,
@@ -134,13 +140,6 @@ async function universalRouterSwap(_impSigner, _quantity) {
     console.log('ethBalance', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
     console.log('wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
     console.log('usdcBalance', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
-}
-
-async function main() {
-    let ethQty = 10;
-    const impSigner = await HARDHAT.ethers.getImpersonatedSigner(SIGNER_ADDRESS);
-
- await universalRouterSwap(impSigner, ethQty);
 }
 
 main()
