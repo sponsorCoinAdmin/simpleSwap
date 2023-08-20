@@ -60,7 +60,7 @@ Project [<b>spCoinSimpleSwapTest</b>](https://github.com/sponsorCoinAdmin/spCoin
 - RECIPIENT ~ https://etherscan.io/address/0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B
 
  The .env file contains settings for this program to operate on and contains the following entries.
-- INFURA_API_MAIN_NET_ACCESS_KEY="https://mainnet.infura.io/v3/a379b9641c8640d2ac8206b8adcfa060"
+- MAINNET_INFURA_API_ACCESS_KEY="https://mainnet.infura.io/v3/a379b9641c8640d2ac8206b8adcfa060"
 - MAINNET_SIGNER_ADDRESS=["0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B"](https://etherscan.io/address/0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B)
 - MAINNET_RECIPIENT_WALLET=["0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B"](https://etherscan.io/address/0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B)
 - MAINNET_USDC=["0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48)
@@ -69,7 +69,7 @@ Setup for the simple swap test requires setting up environment .env file.
 - A sample configuration file <b>.env</b> exists in  project's home directory <b>/spCoinSimpleSwapTest</b>.
 - This file, <b>".env"</b> requires you key to be added for network access.
 - For example, an Infura key entry would look look like:
-  - <b>INFURA_API_MAIN_NET_ACCESS_KEY="<Your Infura Key Here></b>"
+  - <b>MAINNET_INFURA_API_ACCESS_KEY="<Your Infura Key Here></b>"
 - Further environment settings exist in the file <b>/spCoinSimpleSwapTest/env/.e</b>.
  - - - - 
 ### Package Contents<img src="https://github.com/sponsorCoinAdmin/spCoinImages/blob/main/contents.png" width="6%" align= "right">
