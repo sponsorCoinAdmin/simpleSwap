@@ -104,19 +104,18 @@ async function universalRouterSwap(_signer, routerTrade) {
     return receipt;
 }
 
-async function simpleEthSwap( _signer, _quantity ) {
-    const WETH_USDC_V3 = await getPool(WETH, USDC, FeeAmount.MEDIUM)
+async function simpleEthSwap( _signer,  _tokenA, _tokenB, _quantity ) {
+    const pool_V3 = await getPool(_tokenA, _tokenB, FeeAmount.MEDIUM)
     const inputEther = HARDHAT.ethers.utils.parseEther(_quantity).toString()
 
     const trade = await V3Trade.fromRoute(
-        new RouteV3([WETH_USDC_V3], ETHER, USDC),
+        new RouteV3([pool_V3], ETHER, _tokenB),
         CurrencyAmount.fromRawAmount(ETHER, inputEther),
         TradeType.EXACT_INPUT
     )
 
     const routerTrade = buildTrade([trade])
     await universalRouterSwap(_signer, routerTrade);
-
 }
 
 async function main() {
@@ -130,19 +129,19 @@ async function main() {
     wethBalance = await wethContract.balanceOf(SIGNER_ADDRESS)
     usdcBalance = await usdcContract.balanceOf(SIGNER_ADDRESS)
     console.log('---------------------------- BEFORE')
-    console.log('ethBalance', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
-    console.log('wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
-    console.log('usdcBalance', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
+    console.log('BEFORE TRANSFER ethBalance', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
+    console.log('BEFORE TRANSFER wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
+    console.log('BEFORE TRANSFER usdcBalance', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
 
-    await simpleEthSwap(impSigner, quantity)
+    await simpleEthSwap(impSigner, WETH, USDC, quantity)
 
     ethBalance = await PROVIDER.getBalance(SIGNER_ADDRESS)
     wethBalance = await wethContract.balanceOf(SIGNER_ADDRESS)
     usdcBalance = await usdcContract.balanceOf(SIGNER_ADDRESS)
     console.log('---------------------------- AFTER')
-    console.log('ethBalance', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
-    console.log('wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
-    console.log('usdcBalance', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
+    console.log('AFTER  TRANSFER ethBalance', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
+    console.log('AFTER  TRANSFER wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
+    console.log('AFTER  TRANSFER usdcBalance', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
 }
 
 main()
