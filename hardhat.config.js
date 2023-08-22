@@ -9,8 +9,8 @@ module.exports = {
       forking: {
         // url: "https://mainnet.infura.io/v3/{YOUR INFURA KEY HERE}"
         // or if using .env file use example similar to below
-         url: process.env.MAINNET_INFURA_API_ACCESS_KEY
-        //url:process.env.SEPOLIA_INFURA_API_ACCESS_KEY
+        url: process.env.MAINNET_INFURA_API_ACCESS_KEY
+        // url:process.env.SEPOLIA_INFURA_API_ACCESS_KEY
       }
     }
   }

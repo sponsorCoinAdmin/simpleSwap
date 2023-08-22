@@ -22,18 +22,28 @@ const wethContract = new HARDHAT.ethers.Contract(WETH.address, erc20Abi, PROVIDE
 const usdcContract = new HARDHAT.ethers.Contract(USDC.address, erc20Abi, PROVIDER)
 
 async function getPool(tokenA, tokenB, feeAmount) {
+    // console.log("Pool.getAddress(",tokenA, tokenB, feeAmount,")")
     const [token0, token1] = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA]
 
     const poolAddress = Pool.getAddress(token0, token1, feeAmount)
 
+    // console.log("****poolAddress = \n", poolAddress)
+    // console.log("****IUniswapV3Pool.abi = \n", IUniswapV3Pool.abi)
+    // console.log("****PROVIDER = \n", JSON.stringify(PROVIDER, null, 2))
+
     const contract = new HARDHAT.ethers.Contract(poolAddress, IUniswapV3Pool.abi, PROVIDER)
 
+    // console.log("contract = ", JSON.stringify(contract, null, 2))
+    // console.log("contract.liquidity() = \n", await contract.liquidity())
+    // console.log("contract.liquidity() = \n", JSON.stringify(await contract.liquidity, null, 2))
     let liquidity = await contract.liquidity()
 
     let { sqrtPriceX96, tick } = await contract.slot0()
 
     liquidity = JSBI.BigInt(liquidity.toString())
     sqrtPriceX96 = JSBI.BigInt(sqrtPriceX96.toString())
+
+    // console.log("token0", "token0", token0, "token1", token1, "feeAmount", feeAmount, "sqrtPriceX96", sqrtPriceX96, "liquidity", liquidity, "tick", tick)
 
     return new Pool(token0, token1, feeAmount, sqrtPriceX96, liquidity, tick, [
         {
@@ -119,7 +129,7 @@ async function simpleEthSwap( _signer,  _tokenA, _tokenB, _quantity ) {
 }
 
 async function main() {
-    const quantity = '10';
+    const quantity = '1';
     const impSigner = await HARDHAT.ethers.getImpersonatedSigner(SIGNER_ADDRESS);
 
     let ethBalance
