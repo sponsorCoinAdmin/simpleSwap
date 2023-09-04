@@ -6,7 +6,7 @@ const JSBI = require('jsbi')
 const HARDHAT = require("hardhat");
 const PROVIDER = HARDHAT.ethers.provider;
 
-async function getPool(tokenA, tokenB, feeAmount) {
+getPool = async(tokenA, tokenB, feeAmount) => {
     // console.log("Pool.getAddress(",tokenA, tokenB, feeAmount,")")
     const [token0, token1] = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA]
 
@@ -44,6 +44,10 @@ async function getPool(tokenA, tokenB, feeAmount) {
     ])
 }
 
-// modules.exports = {
-//     getPool,
-// }
+module.exports = {
+    getPool,
+}
+
+// export default {
+//   deployToNetwork
+// }   
