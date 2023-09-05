@@ -132,6 +132,15 @@ async function main() {
     const quantity = '1';
     const impSigner = await HARDHAT.ethers.getImpersonatedSigner(SIGNER_ADDRESS);
 
+    networkName = HARDHAT.network.name
+    chainId = HARDHAT.network.config.chainId
+    
+      
+    console.log(JSON.stringify(HARDHAT.network.config, (_, v) => typeof v === 'bigint' ? v.toString() : v, 2))
+
+    console.log("main(",networkName, impSigner.address,")")
+    console.log("ChainId:", chainId)
+
     let ethBalance
     let wethBalance
     let usdcBalance

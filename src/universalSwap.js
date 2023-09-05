@@ -1,5 +1,6 @@
 require("dotenv").config();
 const { getPool } = require("./pool");
+const { deployToNetwork } = require("./deploy");
 const { SwapRouter } = require('@uniswap/universal-router-sdk')
 const { TradeType, Ether, Token, CurrencyAmount, Percent } = require('@uniswap/sdk-core')
 const { Trade: V2Trade } = require('@uniswap/v2-sdk')
@@ -93,6 +94,13 @@ async function simpleEthSwap( _signer,  _tokenA, _tokenB, _quantity ) {
 async function main() {
     const quantity = '1';
     const impSigner = await HARDHAT.ethers.getImpersonatedSigner(SIGNER_ADDRESS);
+    const _tokenSymbol = 'TK1'
+    const networkName = HARDHAT.network.name
+
+    console.log("main(",networkName, impSigner, _tokenSymbol,")")
+    console.log("ChainId:", HARDHAT.network.CHAIN_ID)
+
+    deployToNetwork(HARDHAT.ethers, networkName, impSigner, _tokenSymbol);
 
     let ethBalance
     let wethBalance
@@ -100,20 +108,21 @@ async function main() {
     ethBalance = await PROVIDER.getBalance(SIGNER_ADDRESS)
     wethBalance = await wethContract.balanceOf(SIGNER_ADDRESS)
     usdcBalance = await usdcContract.balanceOf(SIGNER_ADDRESS)
-    console.log('---------------------------- BEFORE')
-    console.log('BEFORE TRANSFER ethBalance', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
-    console.log('BEFORE TRANSFER wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
-    console.log('BEFORE TRANSFER usdcBalance', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
+    console.log('SIGNER address:', SIGNER_ADDRESS)
+    console.log('---------------------------- BEFORE ----------------------------')
+    console.log('BEFORE TRANSFER ethBalance:', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
+    console.log('BEFORE TRANSFER wethBalance:', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
+    console.log('BEFORE TRANSFER usdcBalance:', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
 
     await simpleEthSwap(impSigner, WETH, USDC, quantity)
 
     ethBalance = await PROVIDER.getBalance(SIGNER_ADDRESS)
     wethBalance = await wethContract.balanceOf(SIGNER_ADDRESS)
     usdcBalance = await usdcContract.balanceOf(SIGNER_ADDRESS)
-    console.log('---------------------------- AFTER')
-    console.log('AFTER  TRANSFER ethBalance', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
-    console.log('AFTER  TRANSFER wethBalance', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
-    console.log('AFTER  TRANSFER usdcBalance', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
+    console.log('---------------------------- AFTER ----------------------------')
+    console.log('AFTER  TRANSFER ethBalance:', HARDHAT.ethers.utils.formatUnits(ethBalance, 18))
+    console.log('AFTER  TRANSFER wethBalance:', HARDHAT.ethers.utils.formatUnits(wethBalance, 18))
+    console.log('AFTER  TRANSFER usdcBalance:', HARDHAT.ethers.utils.formatUnits(usdcBalance, 6))
 }
 
 main()

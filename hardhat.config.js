@@ -14,7 +14,6 @@ module.exports = {
         // url: process.env.GOERLI_INFURA_TEST_URL
         // url: process.env.SEPOLIA_INFURA_TEST_URL
       },
-      chainId: 1
     },
     mainnet: {
       url: process.env.MAINNET_ALCHEMY_TEST_URL,
